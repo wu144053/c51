@@ -1,0 +1,77 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              09/20/2024 08:58:15 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: E:\keil\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.ls
+                    -t) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          /**
+   2           * *********************************************
+   3           * 
+   4           * 8051 blink demo
+   5           * 
+   6           * PIN: P11
+   7           * 
+   8           * 
+   9           * *********************************************
+  10          */
+  11          
+  12          //#include<REG52.H>
+  13          //#include<INTRINS.H>
+  14          //#include"gital.h"
+  15          #include<REGX52.H>
+  16          #include"time.h"
+  17          #include"LCD1602.h"
+  18          #include"martrixkey.h"
+  19          
+  20          typedef unsigned char uint8_t;
+  21          typedef unsigned int uint16_t;
+  22          typedef unsigned long uint32_t;
+  23          
+  24          typedef signed char int8_t;
+  25          typedef signed int int16_t;
+  26          typedef signed long int32_t;
+  27          
+  28          #define EXT0_VECTOR 0  /* 0x03 external interrupt 0 */
+  29          #define TIM0_VECTOR 1  /* 0x0b timer 0 */
+  30          #define EXT1_VECTOR 2  /* 0x13 external interrupt 1 */
+  31          #define TIM1_VECTOR 3  /* 0x1b timer 1 */
+  32          #define UART0_VECTOR 4 /* 0x23 serial port 0 */
+  33          
+  34          // LED pin define
+  35          //void digital(unsigned char local_number ,int num); 
+  36          
+  37          void main()
+  38          {
+  39   1          unsigned char num  ;
+  40   1          //run_520();  
+  41   1          LCD_Init();
+  42   1          LCD_ShowString(1,1,"hallo,world");
+  43   1         while(1){
+  44   2              num = key_martrix();
+  45   2              //LCD_ShowNum(2,1,num,1);
+  46   2              if (num){
+  47   3              LCD_ShowNum(2,1,num,1);
+  48   3              }
+  49   2          }
+  50   1          
+  51   1      }   
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.60.7.0   MAIN                                                              09/20/2024 08:58:15 PAGE 2   
+
+   CODE SIZE        =     40    ----
+   CONSTANT SIZE    =     12    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,58 @@
+C51 COMPILER V9.60.7.0   MARTRIXKEY                                                        09/20/2024 08:58:15 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MARTRIXKEY
+OBJECT MODULE PLACED IN .\Objects\martrixkey.obj
+COMPILER INVOKED BY: E:\keil\C51\BIN\C51.EXE martrixkey.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\m
+                    -artrixkey.lst) TABS(2) OBJECT(.\Objects\martrixkey.obj)
+
+line level    source
+
+   1          #include "martrixkey.h"
+   2          #include "time.h"
+   3          unsigned char   key_martrix(){
+   4   1          unsigned char key_number ;
+   5   1          P1 = 0xFF;
+   6   1          P1_3 =0;
+   7   1          //if(P1_7== 0) {time(20);while(P1_7 == 0); time(20) ; key_number = 1;}
+   8   1          //if(P1_6== 0) {time(20);while(P1_6 == 0); time(20) ; key_number = 5;}
+   9   1          if(P1_5== 0) {time(20);while(P1_5 == 0); time(20) ; key_number = 9;}
+  10   1          if(P1_4== 0) {time(20);while(P1_4 == 0); time(20) ; key_number = 13;}
+  11   1      
+  12   1          P1 = 0xFF;
+  13   1          P1_2 = 0;
+  14   1         // if(P1_7== 0) {time(20);while(P1_7 == 0); time(20) ; key_number = 2;}
+  15   1          if(P1_6== 0) {time(20);while(P1_6 == 0); time(20) ; key_number = 6;}
+  16   1          if(P1_5== 0) {time(20);while(P1_5 == 0); time(20) ; key_number = 10;}
+  17   1          if(P1_4== 0) {time(20);while(P1_4 == 0); time(20) ; key_number = 14;}
+  18   1          
+  19   1          P1 = 0xFF;
+  20   1          P1_1 = 0;
+  21   1          //if(P1_7== 0) {time(20);while(P1_7 == 0); time(20) ; key_number = 3;}
+  22   1          if(P1_6== 0) {time(20);while(P1_6 == 0); time(20) ; key_number = 7;}
+  23   1          if(P1_5== 0) {time(20);while(P1_5 == 0); time(20) ; key_number = 11;}
+  24   1          if(P1_4== 0) {time(20);while(P1_4 == 0); time(20) ; key_number = 15;}
+  25   1          
+  26   1      
+  27   1          P1 = 0xFF; 
+  28   1          P1_0 = 0;
+  29   1         // if(P1_7== 0) {time(20);while(P1_7 == 0); time(20) ; key_number = 4;}
+  30   1          if(P1_6== 0) {time(20);while(P1_6 == 0); time(20) ; key_number = 8;}
+  31   1          if(P1_5== 0) {time(20);while(P1_5 == 0); time(20) ; key_number = 12;}
+  32   1          if(P1_4== 0) {time(20);while(P1_4 == 0); time(20) ; key_number = 16;}
+  33   1          return key_number;
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    276    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
